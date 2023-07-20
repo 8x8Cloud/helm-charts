@@ -81,7 +81,7 @@ spec:
           type: FileOrCreate
       - name: kube-dns-config
         configMap:
-          name: {{ include "node-local-dns.fullname" . }}
+          name: {{ .Values.config.kubeDnsConfigMap }}
           optional: true
       - name: config-volume
         configMap:
